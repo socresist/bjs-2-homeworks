@@ -1,15 +1,15 @@
 // Задание 1
-function getArrayParams (...arguments) {
-  let min = arguments[0]; 
-  let max = arguments[0];
+function getArrayParams(arr) {
+  let min = arr[0]; 
+  let max = arr[0];
   let sum = 0;
-   for (let i = 0; i<arguments.length; i++) {if (arguments[i] > max) {max = arguments[i]} 
-     if (arguments[i]<min) {min = arguments[i]}
-     if (arguments.length>1) {sum += arguments[i]                      }
+   for (let i = 0; i<arr.length; i++) {if (arr[i] > max) {max = arr[i]};
+     if (arr[i]<min) {min = arr[i]};
+    sum += arr[i]
      };
-  let result = sum/arguments.length;
-  let avg = Number(result.toFixed(3));
-  return {min,  max, avg}} 
+  let result = sum/arr.length;
+  let avg = Number(result.toFixed(2));
+  return {min,  max, avg}};  
 
 // Задание 2
 
