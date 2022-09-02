@@ -33,7 +33,7 @@ function Student(name, gender, age) {
      let result = 0;
      for (let i = 0; i<this.marks.length; i++) {
        sum += this.marks[i]; 
-       result = Number(sum/this.marks.length).toFixed(1);
+       result = sum/this.marks.length;
      }
 
 return result;
@@ -45,3 +45,4 @@ return result;
     this.excluded = reason; 
     console.log(this.excluded)
   }
+ 
