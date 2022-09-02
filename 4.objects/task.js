@@ -30,12 +30,13 @@ function Student(name, gender, age) {
   Student.prototype.getAverage = function(arr) 
     {arr = this.marks; 
      let sum = 0;
+     let result = 0;
      for (let i = 0; i<this.marks.length; i++) {
        sum += this.marks[i]; 
+       result = Number(sum/this.marks.length).toFixed(1);
      }
 
-     console.log(Number(sum/this.marks.length).toFixed(1))
-  
+return result;
     }
 
   Student.prototype.exclude = function(reason) {
