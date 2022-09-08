@@ -4,36 +4,35 @@ class PrintEditionItem {
     this.name = name;
     this.releaseDate = releaseDate;
     this.pagesCount = pagesCount;
-    this.state = state; 
+    this.bookState = state; 
     this.state = 100;
     this.type = null;
   }
   
   fix() {
-    this.state *= 1.5;
+    this.bookState *= 1.5;
   }
   
-  setState(arg) {
+  set state (arg) {
     if(arg < 0) {
-      this.state = 0;
+      this.bookState = 0;
     } 
       
     else if (arg > 100) 
     {
-      this.state = 100;
+      this.bookState = 100;
     }  
 
     else {
-      this.state = arg;
+      this.bookState = arg;
     }
      } ;
   
-  getState() 
+  get state() 
   {
-    return this.state;
+    return this.bookState;
   }
 }
-
 
 class Magazine extends PrintEditionItem {
   constructor (name, releaseDate, pagesCount, state, type) 
